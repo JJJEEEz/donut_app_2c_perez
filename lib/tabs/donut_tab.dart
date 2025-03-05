@@ -1,3 +1,4 @@
+import 'package:donut_app_2c_perez/utils/donut_tile.dart';
 import 'package:flutter/material.dart';
 
 class DonutTab extends StatelessWidget {
@@ -23,6 +24,8 @@ class DonutTab extends StatelessWidget {
             //En una fila el eje cruxado es el vertical
             SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
+          //Relacion de aspecto (proporcion)
+          childAspectRatio: 1 / 1.5,
         ),
         itemBuilder: (context, index) {
           //cada elemento individual
