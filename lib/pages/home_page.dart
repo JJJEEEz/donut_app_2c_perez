@@ -75,8 +75,56 @@ class _HomePageState extends State<HomePage> {
                 PancakesTab(),
                 PizzaTab()
               ]),
-            )
+            ),
             //Carrito (cart)
+            Container(
+              color: Colors.white,
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 1),
+              child: Row(
+                //Esto alinea los elementos a los extr
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Column(
+                      //Alinear horizontalmente una columna
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "2 Items | \$45",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text("Delivery Charges Included"),
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.pink[300],
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 24, vertical: 12)),
+                      child: const Row(
+                        children: [
+                          Icon(
+                            Icons.shopping_cart_outlined,
+                            color: Colors.white,
+                          ),
+                          SizedBox(width: 10),
+                          Text(
+                            "View Cart",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ))
+                ],
+              ),
+            )
           ],
         ),
       ),
